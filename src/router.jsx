@@ -1,4 +1,5 @@
 import Root from "./Root";
+import RegisterForm from "./components/RegisterForm";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -12,12 +13,12 @@ const router = createBrowserRouter([
 				
 			},
 			{
-				path: "/path",
-				element: <div>This is path 1</div>,
+				path: "/register",
+				element: <RegisterForm/>,
 			},
 			{
-				path: "/path2",
-				element: <div>This is path 2</div>,
+				path: "/login",
+				element: <div>This is login path</div>,
 			}
 		]
 	}

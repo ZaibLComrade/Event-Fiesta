@@ -7,7 +7,7 @@ const listItems = (
 			<NavLink to="/">Home</NavLink>
 		</li>
 		<li>
-			<NavLink to="/path1">Item 2</NavLink>
+			<NavLink to="/register">Register</NavLink>
 		</li>
 		<li>
 			<NavLink to="/path2">Item 3</NavLink>
