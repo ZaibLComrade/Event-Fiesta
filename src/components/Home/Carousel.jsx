@@ -30,7 +30,7 @@ export default function Carousel() {
 					/>
 				</div>
 			</div>
-			<div className="flex justify-center w-full py-2 gap-2">
+			<div className="absolute flex justify-center w-full py-2 bottom-5 gap-2">
 				<a href="#item1" className="btn btn-xs">
 					1
 				</a>
