@@ -1,5 +1,6 @@
 import dummyImage from "../assets/dummyUser.jpeg";
 import { NavLink } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
 
 const listItems = (
 	<>
@@ -16,6 +17,9 @@ const listItems = (
 );
 
 export default function Navbar() {
+	const { user } = useAuth();
+	console.log(user);
+	
 	return (
 		<>
 			<div className="navbar bg-base-100">

@@ -1,11 +1,29 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
 export default function RegisterForm() {
-	const { user, createUser, updateProfile } = useAuth();
+	// Getting customized firebase functions from context
+	const { createUser, updateProfile } = useAuth();
+	const [error, setError] = useState("");
 	
+	// Runs when form is submitted
 	const handleSubmit = e => {
-
+		e.preventDefault(); // Prevents reload when submitted
+		
+		// Collecting form input data
+		const form = new FormData(e.currentTarget);
+		const userProfile = {
+			displayName: form.get("name"),
+			photoURL: form.get("url"),
+		}
+		const email = form.get("email");
+		const password = form.get("password");
+		
+		// Creating firebase user
+		createUser(email, password)
+			.then(userCredential => updateProfile(userCredential.user, userProfile))
+		.catch(err => console.error(err)); // TODO: Errors to be manipulated later
 	}
 	
 	return (
@@ -19,6 +37,7 @@ export default function RegisterForm() {
 						<input
 							type="text"
 							placeholder="name"
+							name="name"
 							className="input input-bordered"
 							required
 						/>
@@ -30,8 +49,8 @@ export default function RegisterForm() {
 						<input
 							type="text"
 							placeholder="url"
+							name="url"
 							className="input input-bordered"
-							required
 						/>
 					</div>
 					<div className="form-control">
@@ -41,6 +60,7 @@ export default function RegisterForm() {
 						<input
 							type="email"
 							placeholder="email"
+							name="email"
 							className="input input-bordered"
 							required
 						/>
@@ -52,6 +72,7 @@ export default function RegisterForm() {
 						<input
 							type="password"
 							placeholder="password"
+							name="password"
 							className="input input-bordered"
 							required
 						/>
