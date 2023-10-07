@@ -1,5 +1,5 @@
 import dummyImage from "../assets/dummyUser.jpeg";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
 const listItems = (
@@ -17,7 +17,7 @@ const listItems = (
 );
 
 export default function Navbar() {
-	const { user } = useAuth();
+	const { user, signOutUser } = useAuth();
 	console.log(user);
 	
 	return (
@@ -56,14 +56,35 @@ export default function Navbar() {
 					<ul className="px-1 menu-horizontal menu">{listItems}</ul>
 				</div>
 				<div className="navbar-end">
-					<div className="dropdown dropdown-end">
+					<div className="flex items-center gap-2">
+						<div className="text-right h-max">
+							{
+								user ? <div>
+									<p className="text">{ user.displayName }</p>
+									<p className="text-sm">{ user.email }</p>
+								</div> :
+								<p>Not Logged In</p>
+							}
+						</div>
 						<label className="btn btn-circle avatar">
 							<div className="w-10 rounded-full">
-								<img src={dummyImage} />
+								<img src={ user?.photoURL ? user.photoURL : dummyImage } />
 							</div>
 						</label>
 					</div>
-					<a className="ml-2 btn">Login</a>
+					<div className="flex items-center">
+					{
+						user ? 
+							<button
+								className="ml-2 btn"
+								onClick={ signOutUser }
+							>
+								Sign Out
+							</button>
+							:
+							<Link to="/login" className="ml-2 btn">Login</Link>
+					}
+					</div>
 				</div>
 			</div>
 		</>
