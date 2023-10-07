@@ -1,15 +1,23 @@
-import PropTypes from "prop-types";
+import {useEffect, useState} from "react"
 
-export default function Services({ services }) {
-	return <>
-		<h2 className="mx-auto w-max">Services</h2>
+export default function Services() {
+	const [services, setServices] = useState([]);
+	useEffect(() => {
+		fetch("services.json")
+			.then(response => response.json())
+			.then(resource => setServices(resource))
+		.catch(err => console.error(err));
+	}, [])
+	
+	return <div className="my-14 space-y-10">
+		<h2 className="mx-auto text-5xl w-max">Services</h2>
 		<div className="w-full mx-auto grid grid-cols-3 gap-8">
 			{services.map((service) => (
 				<div key={service.id} className="card glass">
 					<figure className="">
 						<img
 							className="w-full object-cover h-[250px]"
-							src="https://picsum.photos/200"
+							src="https://picsum.photos/600"
 							alt="car!"
 						/>
 					</figure>
@@ -25,9 +33,5 @@ export default function Services({ services }) {
 				</div>
 			))}
 		</div>
-	</>
+	</div>
 }
-
-Services.propTypes = {
-	services: PropTypes.array.isRequired,
-};

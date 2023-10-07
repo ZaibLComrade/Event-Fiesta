@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "position": "Event Coordinator",
+    "bio": "Alice Johnson is an experienced event coordinator with a passion for creating memorable and flawless events. With a keen eye for detail and excellent organizational skills, she ensures that every event runs smoothly, from weddings to corporate gatherings.",
+    "img": "https://example.com/alice-johnson.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Bob Smith",
+    "position": "Venue Manager",
+    "bio": "Bob Smith brings extensive knowledge of venues and logistics to our team. As a dedicated venue manager, he works closely with clients to find the perfect location for their events, ensuring that every detail is taken care of.",
+    "img": "https://example.com/bob-smith.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Caroline Davis",
+    "position": "Marketing Specialist",
+    "bio": "Caroline Davis is a marketing specialist who excels in promoting our events. With a background in digital marketing and creative campaigns, she helps us reach a broader audience and create buzz around our events.",
+    "img": "https://example.com/caroline-davis.jpg"
+  },
+  {
+    "id": 4,
+    "name": "David Wilson",
+    "position": "Decorations Designer",
+    "bio": "David Wilson is a talented decorations designer who transforms event spaces into stunning and immersive environments. His creativity and attention to detail make every event uniquely beautiful.",
+    "img": "https://example.com/david-wilson.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Ella Mitchell",
+    "position": "Catering Manager",
+    "bio": "Ella Mitchell oversees our catering services, ensuring that guests are treated to delicious and beautifully presented food. Her culinary expertise and dedication to quality are the keys to our successful events.",
+    "img": "https://example.com/ella-mitchell.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Frank Adams",
+    "position": "Entertainment Coordinator",
+    "bio": "Frank Adams specializes in entertainment coordination, bringing excitement and fun to our events. From live bands to DJs and performers, Frank ensures that guests have a fantastic time.",
+    "img": "https://example.com/frank-adams.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Grace Turner",
+    "position": "Client Relations Manager",
+    "bio": "Grace Turner is our client relations manager, dedicated to ensuring our clients' satisfaction. She builds strong relationships with clients, listens to their needs, and makes sure their events exceed expectations.",
+    "img": "https://example.com/grace-turner.jpg"
+  }
+]
+

@@ -18,7 +18,6 @@ const listItems = (
 
 export default function Navbar() {
 	const { user, signOutUser } = useAuth();
-	console.log(user);
 	
 	return (
 		<>
@@ -56,14 +55,14 @@ export default function Navbar() {
 					<ul className="px-1 menu-horizontal menu">{listItems}</ul>
 				</div>
 				<div className="navbar-end">
-					<div className="flex items-center gap-2">
+					<div className="flex items-center gap-3">
 						<div className="text-right h-max">
 							{
 								user ? <div>
 									<p className="text">{ user.displayName }</p>
 									<p className="text-sm">{ user.email }</p>
 								</div> :
-								<p>Not Logged In</p>
+								<p>Not logged in</p>
 							}
 						</div>
 						<label className="btn btn-circle avatar">

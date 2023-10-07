@@ -23,8 +23,8 @@ export default function RegisterForm() {
 	}
 	
 	return (
-		<>
-			<div className="flex-shrink-0 w-full max-w-sm pb-5 border border-red-500 shadow-2xl card bg-base-100">
+		<div>
+			<div className="flex-shrink-0 w-full max-w-sm pb-5 mx-auto border border-red-500 shadow-2xl card bg-base-100">
 				<form className="card-body" onSubmit={ handleSubmit }>
 					<div className="form-control">
 						<label className="label">
@@ -68,6 +68,6 @@ export default function RegisterForm() {
 					<p>Don't have an account? <Link className="text-blue-600 underline hover:text-blue-500" to="/register">Register</Link> here</p>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 }

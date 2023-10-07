@@ -3,7 +3,7 @@ import landscapeImage2 from "../../assets/dummyLandscape2.jpg";
 
 export default function Carousel() {
 	return (
-		<>
+		<div className="relative">
 			<div className="w-full carousel h-[90vh]">
 				<div id="item1" className="w-full carousel-item">
 					<img
@@ -44,6 +44,6 @@ export default function Carousel() {
 					4
 				</a>
 			</div>
-		</>
+		</div>
 	);
 }
