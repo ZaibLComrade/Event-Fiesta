@@ -11,7 +11,13 @@ const listItems = (
 			<NavLink to="/register">Register</NavLink>
 		</li>
 		<li>
-			<NavLink to="/path2">Item 3</NavLink>
+			<NavLink to="/path1">About</NavLink>
+		</li>
+		<li>
+			<NavLink to="/path2">Gallery</NavLink>
+		</li>
+		<li>
+			<NavLink to="/path3">Blog</NavLink>
 		</li>
 	</>
 );

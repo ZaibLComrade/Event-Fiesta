@@ -10,11 +10,10 @@ import {
 	signOut,
 } from "firebase/auth";
 import auth from "../config/firebase.config"
-
 export const AuthContext = createContext(null);
 
 export default function AuthProvider({ children }) {
-	const [loading, setLoading] = useState(false);
+	const [loading, setLoading] = useState(true);
 	const [user, setUser] = useState(null); // To store logged in user
 	
 	useEffect(() => {

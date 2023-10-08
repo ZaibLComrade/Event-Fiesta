@@ -1,66 +1,53 @@
 [
   {
     "id": 1,
-    "name": "John Smith",
-    "position": "Event Attendee",
-    "testimonial": "I attended an event organized by this team, and it was absolutely fantastic! Everything, from the venue to the decorations and entertainment, was top-notch. I had a memorable time and would highly recommend their services.",
-    "img": "https://example.com/john-smith.jpg"
-  },
-  {
-    "id": 2,
     "name": "Sarah Johnson",
     "position": "Bride",
     "testimonial": "Our wedding day was perfect, thanks to the incredible work of the event planning team. They took care of every detail, and the result was beyond our wildest dreams. We couldn't have asked for a better team.",
-    "img": "https://example.com/sarah-johnson.jpg"
+    "img": "https://i.ibb.co/VvYmSbX/bride.jpg"
+
   },
   {
-    "id": 3,
-    "name": "Mark Davis",
-    "position": "Corporate Client",
-    "testimonial": "As a corporate client, I've worked with this event planning company on multiple occasions. They consistently deliver exceptional service, from product launches to team-building events. Their attention to detail is unmatched.",
-    "img": "https://example.com/mark-davis.jpg"
-  },
-  {
-    "id": 4,
+    "id": 2,
     "name": "Emily White",
     "position": "Guest of Honor",
     "testimonial": "I was the guest of honor at an anniversary party organized by this team, and I was blown away by the level of care and creativity they put into every aspect. It was a truly special celebration.",
-    "img": "https://example.com/emily-white.jpg"
+    "img": "https://i.ibb.co/7pvB4Yt/guest.jpg"
+
   },
   {
-    "id": 5,
-    "name": "Michael Brown",
-    "position": "Satisfied Customer",
-    "testimonial": "I hired this event planner for my daughter's sweet sixteen party, and they exceeded all my expectations. The party was a huge success, and my daughter and her friends had a blast.",
-    "img": "https://example.com/michael-brown.jpg"
-  },
-  {
-    "id": 6,
+    "id": 3,
     "name": "Linda Martinez",
     "position": "Event Coordinator",
     "testimonial": "I've had the pleasure of working with this event planning team on several occasions. Their professionalism and commitment to excellence make them stand out in the industry. I highly recommend them.",
-    "img": "https://example.com/linda-martinez.jpg"
+    "img": "https://i.ibb.co/MRkMvn8/woman5.jpg"
   },
   {
-    "id": 7,
-    "name": "Daniel Clark",
-    "position": "Groom",
-    "testimonial": "Our wedding was a dream come true, thanks to the hard work and dedication of this event planning company. They made sure every detail was perfect, and we couldn't be happier with the results.",
-    "img": "https://example.com/daniel-clark.jpg"
-  },
-  {
-    "id": 8,
+    "id": 4,
     "name": "Sophia Adams",
     "position": "Event Enthusiast",
     "testimonial": "I've attended multiple events organized by this team, and they always leave me impressed. From elegant galas to fun-filled parties, their creativity and attention to detail shine through in every event.",
-    "img": "https://example.com/sophia-adams.jpg"
+    "img": "https://i.ibb.co/RpNvdq8/woman7.jpg"
   },
   {
-    "id": 9,
+    "id": 5,
     "name": "Robert Turner",
     "position": "Corporate Partner",
     "testimonial": "Our company has partnered with this event planner for various corporate events, and they consistently deliver outstanding results. Their ability to turn ideas into reality is remarkable.",
-    "img": "https://example.com/robert-turner.jpg"
+    "img": "https://i.ibb.co/GFvs8Cf/man9.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Daniel Clark",
+    "position": "Groom",
+    "testimonial": "Our wedding was a dream come true, thanks to the hard work and dedication of this event planning company. They made sure every detail was perfect, and we couldn't be happier with the results.",
+    "img": "https://i.ibb.co/BLWztMg/man2.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Michael Brown",
+    "position": "Satisfied Customer",
+    "testimonial": "I hired this event planner for my daughter's sweet sixteen party, and they exceeded all my expectations. The party was a huge success, and my daughter and her friends had a blast.",
+    "img": "https://i.ibb.co/hcZX498/man4.jpg"
   }
 ]
-

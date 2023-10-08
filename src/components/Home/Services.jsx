@@ -6,11 +6,13 @@ export default function Services() {
 	useEffect(() => {
 		fetch("services.json")
 			.then(response => response.json())
-			.then(resource => setServices(resource))
+			.then(resource => {
+				setServices(resource)
+			})
 		.catch(err => console.error(err));
 	}, [])
 	
-	return <div className="my-14 space-y-10">
+	return <div className="container mx-auto my-14 space-y-10">
 		<h2 className="mx-auto text-5xl w-max">Services</h2>
 		<div className="w-full mx-auto grid grid-cols-3 gap-8">
 			{services.map((service) => (

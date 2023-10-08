@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@splidejs/react-splide": "^0.7.12",
+    "aos": "^3.0.0-beta.6",
     "autoprefixer": "^10.4.16",
     "firebase": "^10.4.0",
     "localforage": "^1.10.0",

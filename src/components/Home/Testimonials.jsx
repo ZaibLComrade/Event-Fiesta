@@ -1,35 +1,33 @@
 import { useEffect, useState } from "react";
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
+import '@splidejs/react-splide/css';
+import AOS from "aos";
+AOS.init();
 
-const createSlider = (currSlider, totalSliders, contents) => {
-	const { name, position, testimonial, id } = contents;
-	const prevSlider = ((currSlider - 2 + totalSliders) % totalSliders) + 1;
-	const nextSlider = (currSlider % totalSliders) + 1;
+const createSlider = (contents) => {
+	const { name, position, testimonial, id, img } = contents;
 	return (
-		<div
-			key={ id }
-			id={`${"slide" + currSlider}`}
-			className="relative w-full carousel-item"
-		>
+		<SplideSlide key={ id }>
 			<div className="absolute w-full h-full bg-black/60"></div>
-			<img
-				src={`${"https://picsum.photos/3000/150" + currSlider}`}
-				className="object-cover w-full"
+			<img 
+				src={`${"https://picsum.photos/3000/1500"}`}
+				className="object-cover w-full h-full"
 			/>
 			<div className="absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-				<p className="mb-5 text-2xl">{ `"${testimonial}"` }</p>
-				<img className="mx-auto w-[60px] object-cover mb-2 rounded-full" src={ `${"https://picsum.photos/60" + currSlider}` } alt=""/>
-				<h3 className="text-lg">{name}</h3>
-				<p className="text-sm">{position}</p>
+				<p data-aos="fade-up" className="mb-5 text-2xl">{ `"${testimonial}"` }</p>
+				<div data-aos="fade-right">
+					<img 
+						data-aos="zoom-in-up"
+						data-aos-delay="200"
+						className="mx-auto w-[60px] h-[60px] object-cover mb-2 rounded-full" 
+						src={img} 
+						alt=""
+					/>
+					<h3 className="text-lg">{name}</h3>
+					<p  className="text-sm">{position}</p>
+				</div>
 			</div>
-			<div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-				<a href={`${"#slide" + prevSlider}`} className="btn btn-circle">
-					❮
-				</a>
-				<a href={`${"#slide" + nextSlider}`} className="btn btn-circle">
-					❯
-				</a>
-			</div>
-		</div>
+		</SplideSlide>
 	);
 };
 
@@ -45,11 +43,23 @@ export default function Testimonials() {
 	return (
 		<div className="mt-14 space-y-10">
 			<h2 className="mx-auto text-5xl w-max">Testimonials</h2>
-			<div className="w-full carousel h-[500px]">
-				{testimonials.map((elem, idx) =>
-					createSlider(idx + 1, testimonials.length, elem)
+			<Splide
+				hasTrack={ false }
+				aria-label="Testimonials"
+				options= {{
+					rewind: true,
+					type: "fade",
+					height: "100vh",
+					width: "100%",
+					gap: "1rem",
+				}}
+			>
+				<SplideTrack>
+				{testimonials.map(elem =>
+					createSlider(elem)
 				)}
-			</div>
+				</SplideTrack>
+			</Splide>
 		</div>
 	);
 }

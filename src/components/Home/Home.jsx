@@ -1,4 +1,3 @@
-import LoadingScreen from "../LoadingScreen";
 import Carousel from "./Carousel";
 import Footer from "./Footer";
 import Services from "./Services";
@@ -8,12 +7,9 @@ import Testimonials from "./Testimonials";
 export default function Home() {
 	return <div>
 		<Carousel/>
-		<div className="container mx-auto">
-			<Services/>
-			<Team/>
-		</div>
+		<Services/>
+		<Team/>
 		<Testimonials/>
 		<Footer/>
-		<LoadingScreen/>
 	</div>
 }
