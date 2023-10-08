@@ -18,7 +18,7 @@ const createSlider = (contents) => {
 				<div data-aos="fade-right">
 					<img 
 						data-aos="zoom-in-up"
-						data-aos-delay="200"
+						data-aos-delay="400"
 						className="mx-auto w-[60px] h-[60px] object-cover mb-2 rounded-full" 
 						src={img} 
 						alt=""
@@ -41,8 +41,9 @@ export default function Testimonials() {
 	}, []);
 
 	return (
-		<div className="mt-14 space-y-10">
-			<h2 className="mx-auto text-5xl w-max">Testimonials</h2>
+		<div className="relative mt-14">
+			<p className="absolute top-[20px] text-white/[0.15] left-1/2 -translate-x-1/2 text-[220px] z-10">"</p>
+			<h2 className="absolute z-20 mx-auto text-5xl top-[100px] left-1/2 -translate-x-1/2 w-max">Testimonials</h2>
 			<Splide
 				hasTrack={ false }
 				aria-label="Testimonials"
