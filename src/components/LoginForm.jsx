@@ -26,7 +26,7 @@ export default function RegisterForm() {
 	
 	return (
 		<div>
-			<div className="flex-shrink-0 w-full max-w-sm pb-5 mx-auto border border-red-500 shadow-2xl card bg-base-100">
+			<div className="flex-shrink-0 w-full max-w-sm pb-5 mx-auto border-red-500 shadow-2xl card bg-base-100">
 				<form className="card-body" onSubmit={ handleSubmit }>
 					<div className="form-control">
 						<label className="label">

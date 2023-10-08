@@ -1,7 +1,7 @@
 import { CircleLoader, ClimbingBoxLoader, ClockLoader, HashLoader } from "react-spinners";
 
 const loaderProps = {
-	color: "#36d7b7",
+	color: "#5AC2B0",
 	number: 1,
 }
 

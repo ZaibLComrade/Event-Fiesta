@@ -1,58 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Pacifico&family=Playfair+Display:wght@400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.font-dancing-script {
+  font-family: "Dancing Script", cursive;
+}
+.font-great-vibes {
+  font-family: "Great Vibes", cursive;
+}
+.font-lato {
+  font-family: "Lato", sans-serif;
+}
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+.font-open-sans {
+  font-family: "Open Sans", sans-serif;
+}
+.font-pacifico {
+  font-family: "Pacifico", cursive;
+}
+.font-playfair-display {
+  font-family: "Playfair Display", serif;
+}
+
 .underlay {
-	width: 0px;
-	height: 4px;
-	background-color: blue;
-	position: absolute;
-	border-radius: 100px;
-	left: 50%;
-	transform: translateX(-50%);
-	bottom: 4px;
-	z-index: -10;
-	transition: width 0.3s;
-}
-
-.active {
-	background-color: transparent !important;
-	z-index: 10;
-}
-
-.active:hover .underlay {
-	width: 80%;
-}
-
-.active .underlay {
-	width: 80%;
-}
-
-.dropdown .underlay {
-	bottom: 0;
-}
-
-.dropdown .underlay-parent:hover .underlay {
-	width: 100%;
-}
-
-.dropdown .active .underlay {
-	width: 100%;
-}
-
-.underlay-parent {
-	z-index: 10;
+  width: 0px;
+  height: 4px;
+  background-color: #5ac2b0;
+  position: absolute;
+  border-radius: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 4px;
+  z-index: -10;
+  transition: width 0.3s;
 }
 
 .underlay-parent:hover {
-	background-color: transparent !important;
+  color: #5ac2b0;
+}
+
+.active {
+  background-color: transparent !important;
+  z-index: 10;
+  color: #5ac2b0 !important;
+  font-weight: 600;
+}
+
+.active:hover .underlay {
+  width: 80%;
+}
+
+.active .underlay {
+  width: 80%;
+}
+
+.dropdown .underlay {
+  bottom: 0;
+}
+
+.dropdown .underlay-parent:hover .underlay {
+  width: 100%;
+}
+
+.dropdown .active .underlay {
+  width: 100%;
+}
+
+.underlay-parent {
+  z-index: 10;
+}
+
+.underlay-parent:hover {
+  background-color: transparent !important;
 }
 
 .underlay-parent:hover .underlay {
-	width: 80%;
+  width: 80%;
 }
 
 .headroom {
-	z-index: 9999 !important;
+  z-index: 9999 !important;
 }
-
