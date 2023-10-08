@@ -51,3 +51,8 @@
 .underlay-parent:hover .underlay {
 	width: 80%;
 }
+
+.headroom {
+	z-index: 9999 !important;
+}
+

@@ -16,7 +16,7 @@ export default function Services() {
 		<h2 className="mx-auto text-5xl w-max">Services</h2>
 		<div className="w-full mx-auto grid grid-cols-3 gap-8">
 			{services.map((service) => (
-				<div key={service.id} className="card glass">
+				<div key={service.id} className="card hover:-translate-y-3 duration-200 ease-in-out transition-transform glass">
 					<figure className="">
 						<img
 							className="w-full object-cover h-[250px]"

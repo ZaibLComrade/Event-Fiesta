@@ -54,7 +54,7 @@ export default function Navbar() {
 							{listItems}
 						</ul>
 					</div>
-					<a className="text-xl normal-case btn btn-ghost">
+					<a className="text-4xl normal-case btn btn-ghost">
 						Event Fiesta
 					</a>
 				</div>

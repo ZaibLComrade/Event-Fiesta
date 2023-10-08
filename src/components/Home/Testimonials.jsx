@@ -41,9 +41,9 @@ export default function Testimonials() {
 	}, []);
 
 	return (
-		<div className="relative mt-14">
-			<p className="absolute top-[20px] text-white/[0.15] left-1/2 -translate-x-1/2 text-[220px] z-10">"</p>
-			<h2 className="absolute z-20 mx-auto text-5xl top-[100px] left-1/2 -translate-x-1/2 w-max">Testimonials</h2>
+		<div className="relative z-[1] mt-14">
+			<p className="absolute top-[150px] text-white/30 left-1/2 -translate-x-1/2 text-7xl z-[2]">Testimonials</p>
+			<h2 className="absolute z-[3] mx-auto text-[180px] top-[40px] left-1/2 -translate-x-1/2 w-max">"</h2>
 			<Splide
 				hasTrack={ false }
 				aria-label="Testimonials"
@@ -52,7 +52,6 @@ export default function Testimonials() {
 					type: "fade",
 					height: "100vh",
 					width: "100%",
-					gap: "1rem",
 				}}
 			>
 				<SplideTrack>
