@@ -4,6 +4,7 @@ import LoginForm from "./components/LoginForm";
 import Home from "./components/Home/Home";
 import { createBrowserRouter } from "react-router-dom";
 import NotFound from "./NotFound";
+import Details from "./components/Details";
 
 const router = createBrowserRouter([
 	{
@@ -25,7 +26,17 @@ const router = createBrowserRouter([
 			{
 				path: "/login",
 				element: <LoginForm/>,
-			}
+			},
+			{
+				path: "/details/:id",
+				element: <Details/>,
+				loader: async ({ params }) => {
+					const response = await fetch("/services.json");
+					const resource = await response.json();
+					const idInt = parseInt(params.id);
+					return resource.find(res => res.id === idInt) || null;
+				},
+			},
 		]
 	}
 ])

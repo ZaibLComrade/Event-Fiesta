@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 
 const createSlider = (currSlider, totalSliders, contents) => {
-	const { name, position, testimonial } = contents;
+	const { name, position, testimonial, id } = contents;
 	const prevSlider = ((currSlider - 2 + totalSliders) % totalSliders) + 1;
 	const nextSlider = (currSlider % totalSliders) + 1;
 	return (
 		<div
+			key={ id }
 			id={`${"slide" + currSlider}`}
 			className="relative w-full carousel-item"
 		>
@@ -15,7 +16,7 @@ const createSlider = (currSlider, totalSliders, contents) => {
 				className="object-cover w-full"
 			/>
 			<div className="absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-				<p className="mb-5 text-2xl">{ `${testimonial}"` }</p>
+				<p className="mb-5 text-2xl">{ `"${testimonial}"` }</p>
 				<img className="mx-auto w-[60px] object-cover mb-2 rounded-full" src={ `${"https://picsum.photos/60" + currSlider}` } alt=""/>
 				<h3 className="text-lg">{name}</h3>
 				<p className="text-sm">{position}</p>

@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react"
+import {Link} from "react-router-dom";
 
 export default function Services() {
 	const [services, setServices] = useState([]);
@@ -25,9 +26,12 @@ export default function Services() {
 						<h2 className="mx-auto card-title w-max">{ service.title }</h2>
 						<p className="mx-auto">{ service.short_description }</p>
 						<div className="justify-end mx-auto w-max card-actions">
-							<button className="btn btn-primary">
+							<Link
+								to={ `/details/${service.id}` }
+								className="btn btn-primary"
+							>
 								Learn now!
-							</button>
+							</Link>
 						</div>
 					</div>
 				</div>
