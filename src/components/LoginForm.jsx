@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
 export default function RegisterForm() {
 	// Getting customized firebase functions from context
 	const { signInUser } = useAuth();
+	const navigate = useNavigate();
+	const location = useLocation();
 	const [error, setError] = useState("");
 	
 	// Runs when form is submitted
@@ -18,7 +20,7 @@ export default function RegisterForm() {
 		
 		// Loggin in firebase user
 		signInUser(email, password)
-			.then()
+			.then(() => navigate(location?.state || "/"))
 		.catch(err => console.error(err)); // TODO: Errors to be manipulated later
 	}
 	

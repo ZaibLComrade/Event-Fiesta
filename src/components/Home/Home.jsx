@@ -1,3 +1,4 @@
+import LoadingScreen from "../LoadingScreen";
 import Carousel from "./Carousel";
 import Footer from "./Footer";
 import Services from "./Services";
@@ -13,5 +14,6 @@ export default function Home() {
 		</div>
 		<Testimonials/>
 		<Footer/>
+		<LoadingScreen/>
 	</div>
 }

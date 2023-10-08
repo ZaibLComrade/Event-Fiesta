@@ -14,12 +14,14 @@ import auth from "../config/firebase.config"
 export const AuthContext = createContext(null);
 
 export default function AuthProvider({ children }) {
+	const [loading, setLoading] = useState(false);
 	const [user, setUser] = useState(null); // To store logged in user
 	
 	useEffect(() => {
 		// Observes user logged in state and returns callback function to unsubscribe on component unmount
 		const unsubscribe = onAuthStateChanged(auth, loggedInUser => {
 			setUser(loggedInUser);
+			setLoading(false);
 		})
 		
 		return () => {
@@ -28,15 +30,19 @@ export default function AuthProvider({ children }) {
 	}, []);
 	
 	const createUser = (email, password) => {
+		setLoading(true);
 		return createUserWithEmailAndPassword(auth, email, password);
 	}
 	const signInUser = (email, password) => {
+		setLoading(true);
 		return signInWithEmailAndPassword(auth, email, password);
 	}
 	const signOutUser = () => {
+		setLoading(true);
 		return signOut(auth);
 	}
 	const googleSignInUser = () => {
+		setLoading(true);
 		const provider = new GoogleAuthProvider;
 		return signInWithPopup(auth, provider);
 	}
@@ -49,6 +55,7 @@ export default function AuthProvider({ children }) {
 		signOutUser,
 		googleSignInUser,
 		updateProfile,
+		loading,
 	};
 	
 	return <AuthContext.Provider value={ authInfo }>

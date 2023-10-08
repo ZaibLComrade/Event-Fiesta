@@ -5,6 +5,7 @@ import Home from "./components/Home/Home";
 import { createBrowserRouter } from "react-router-dom";
 import NotFound from "./NotFound";
 import Details from "./components/Details";
+import PrivateRoute from "./components/PrivateRoute";
 
 const router = createBrowserRouter([
 	{
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/details/:id",
-				element: <Details/>,
+				element: <PrivateRoute><Details/></PrivateRoute>,
 				loader: async ({ params }) => {
 					const response = await fetch("/services.json");
 					const resource = await response.json();
