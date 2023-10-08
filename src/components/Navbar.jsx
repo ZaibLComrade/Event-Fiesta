@@ -1,33 +1,34 @@
 import dummyImage from "../assets/dummyUser.jpeg";
 import { NavLink, Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import Headroom from "react-headroom";
 
 const listItems = (
 	<>
 		<li>
-			<NavLink to="/">Home</NavLink>
+			<NavLink className="underlay-parent" to="/"><span className="underlay"></span>Home</NavLink>
 		</li>
 		<li>
-			<NavLink to="/register">Register</NavLink>
+			<NavLink className="underlay-parent" to="/register"><span className="underlay"></span>Register</NavLink>
 		</li>
 		<li>
-			<NavLink to="/path1">About</NavLink>
+			<NavLink className="underlay-parent" to="/path1"><span className="underlay"></span>About</NavLink>
 		</li>
 		<li>
-			<NavLink to="/path2">Gallery</NavLink>
+			<NavLink className="underlay-parent" to="/path2"><span className="underlay"></span>Gallery</NavLink>
 		</li>
 		<li>
-			<NavLink to="/path3">Blog</NavLink>
+			<NavLink className="underlay-parent" to="/path3"><span className="underlay"></span>Blog</NavLink>
 		</li>
 	</>
 );
 
 export default function Navbar() {
 	const { user, signOutUser } = useAuth();
-	
+
 	return (
-		<>
-			<div className="navbar bg-base-100">
+		<Headroom>
+			<div className="navbar bg-base-100 h-[100px]">
 				<div className="navbar-start">
 					<div className="dropdown">
 						<label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -58,40 +59,45 @@ export default function Navbar() {
 					</a>
 				</div>
 				<div className="hidden navbar-center lg:flex">
-					<ul className="px-1 menu-horizontal menu">{listItems}</ul>
+					<ul className="px-1 menu-horizontal menu underlay-gp">{listItems}</ul>
 				</div>
 				<div className="navbar-end">
 					<div className="flex items-center gap-3">
 						<div className="text-right h-max">
-							{
-								user ? <div>
-									<p className="text">{ user.displayName }</p>
-									<p className="text-sm">{ user.email }</p>
-								</div> :
+							{user ? (
+								<div>
+									<p className="text">{user.displayName}</p>
+									<p className="text-sm">{user.email}</p>
+								</div>
+							) : (
 								<p>Not logged in</p>
-							}
+							)}
 						</div>
 						<label className="btn btn-circle avatar">
 							<div className="w-10 rounded-full">
-								<img src={ user?.photoURL ? user.photoURL : dummyImage } />
+								<img
+									src={
+										user?.photoURL
+											? user.photoURL
+											: dummyImage
+									}
+								/>
 							</div>
 						</label>
 					</div>
 					<div className="flex items-center">
-					{
-						user ? 
-							<button
-								className="ml-2 btn"
-								onClick={ signOutUser }
-							>
+						{user ? (
+							<button className="ml-2 btn" onClick={signOutUser}>
 								Sign Out
 							</button>
-							:
-							<Link to="/login" className="ml-2 btn">Login</Link>
-					}
+						) : (
+							<Link to="/login" className="ml-2 btn">
+								Login
+							</Link>
+						)}
 					</div>
 				</div>
 			</div>
-		</>
+		</Headroom>
 	);
 }

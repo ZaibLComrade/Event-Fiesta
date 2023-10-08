@@ -2,5 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+.underlay {
+	width: 0px;
+	height: 4px;
+	background-color: blue;
+	position: absolute;
+	border-radius: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 4px;
+	z-index: -10;
+	transition: width 0.3s;
+}
+
 .active {
+	background-color: transparent !important;
+	z-index: 10;
+}
+
+.active:hover .underlay {
+	width: 80%;
+}
+
+.active .underlay {
+	width: 80%;
+}
+
+.dropdown .underlay {
+	bottom: 0;
+}
+
+.dropdown .underlay-parent:hover .underlay {
+	width: 100%;
+}
+
+.dropdown .active .underlay {
+	width: 100%;
+}
+
+.underlay-parent {
+	z-index: 10;
+}
+
+.underlay-parent:hover {
+	background-color: transparent !important;
+}
+
+.underlay-parent:hover .underlay {
+	width: 80%;
 }
