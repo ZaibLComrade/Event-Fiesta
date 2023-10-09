@@ -1,5 +1,5 @@
 # Event Fiesta
-## Live Link: 
+## Live Link: https://event-fiesta.web.app/
 
 ## Project Features
 - Mesmerizing UI to provide users luxurious and elegant experience.
