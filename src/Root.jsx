@@ -8,9 +8,9 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function Root() {
 	const { loading } = useAuth();
 	if(loading) return <LoadingScreen/>
-	return <>
+	return <div>
 		<Navbar/>
 		<Outlet/>
 		<ToastContainer/>
-	</>
+	</div>
 }

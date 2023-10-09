@@ -24,9 +24,9 @@ export default function Services() {
 						/>
 					</figure>
 					<div className="text-left card-body">
-						<h2 className=" card-title font-lato">{ service.title }</h2>
-						<p className="mx-auto font-open-sans text-lg font-medium">{ service.short_description }</p>
-						<p className=" font-montserrat text-xl font-medium">Price: { service.price }</p>
+						<h2 className=" card-title font-lato font-bold">{ service.title }</h2>
+						<p className="mx-auto my-5 font-open-sans text-lg font-medium">{ service.short_description }</p>
+						<p className=" font-montserrat text-xl font-semibold">Price: { service.price }</p>
 						<div className="justify-end card-actions">
 							<Link
 								to={ `/details/${service.id}` }
