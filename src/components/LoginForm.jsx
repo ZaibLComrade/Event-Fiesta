@@ -75,6 +75,13 @@ export default function RegisterForm() {
       }); // TODO: Errors to be manipulated later
   };
 
+  const handleGoogleSignIn = e => {
+    e.preventDefault();
+    googleSignInUser()
+      .then(() => navigate(location?.state || "/"))
+      .catch(err => console.error(err));
+  }
+
   return (
     <div>
       <div className="flex-shrink-0 w-full font-montserrat max-w-sm pb-5 mx-auto border-red-500 shadow-2xl card bg-base-100">
@@ -118,7 +125,7 @@ export default function RegisterForm() {
 		<div className="mx-auto text-center w-full px-8 mb-4">
 			<hr className="border w-full"/>
 			<p className="font-bold  w-8 mx-auto bg-base-100 relative -top-3"> Or</p>
-			<button onClick={ googleSignInUser } className="flex items-center btn btn-accent w-full gap-2"><FcGoogle className="text-xl"/><div>Login with Google</div></button>
+			<button onClick={ handleGoogleSignIn } className="flex items-center btn btn-accent w-full gap-2"><FcGoogle className="text-xl"/><div>Login with Google</div></button>
 		</div>
         <div className="mx-auto text-sm md:text-base text-center">
           <p>
