@@ -28,8 +28,9 @@ export default function RegisterForm() {
 	
 	return (
 		<div>
-			<div className="flex-shrink-0 w-full max-w-sm pb-5 mx-auto border border-red-500 shadow-2xl card bg-base-100">
+			<div className="flex-shrink-0 font-montserrat w-full max-w-sm pb-5 mx-auto shadow-2xl card bg-base-100">
 				<form className="card-body" onSubmit={ handleSubmit }>
+					<h1 className="w-max mx-auto text-3xl font-semibold font-playfair-display">Register</h1>
 					<div className="form-control">
 						<label className="label">
 							<span className="label-text">Name <span className="relative text-red-500 top-[3.5px]">*</span></span>

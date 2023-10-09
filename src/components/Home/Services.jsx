@@ -14,7 +14,7 @@ export default function Services() {
 	
 	return <div className="container mx-auto my-14 space-y-10">
 		<h2 className="mx-auto text-5xl w-max">Services</h2>
-		<div className="w-full mx-auto grid grid-cols-3 gap-8">
+		<div className="w-full mx-auto grid md:grid-cold-2 grid-cols-1 lg:grid-cols-3 gap-8">
 			{services.map((service) => (
 				<div key={service.id} className="card hover:-translate-y-3 duration-200 ease-in-out transition-transform glass">
 					<figure className="">

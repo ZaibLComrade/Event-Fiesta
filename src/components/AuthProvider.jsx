@@ -55,6 +55,7 @@ export default function AuthProvider({ children }) {
 		googleSignInUser,
 		updateProfile,
 		loading,
+		setLoading,
 	};
 	
 	return <AuthContext.Provider value={ authInfo }>

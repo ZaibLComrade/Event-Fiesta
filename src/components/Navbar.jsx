@@ -41,10 +41,10 @@ export default function Navbar() {
       <div className="navbar bg-primary py-4 text-custom-grey-1">
         <div className="navbar-start font-montserrat">
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+            <label tabIndex={0} className="btn btn-ghost xl:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-5 h-5"
+                className="lg:w-10 lg:h-10 md:h-7 md:w-7 w-5 h-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -68,7 +68,7 @@ export default function Navbar() {
             Event Fiesta
           </a>
         </div>
-        <div className="hidden navbar-center lg:flex">
+        <div className="hidden navbar-center xl:flex">
           <ul className="px-1 menu-horizontal menu underlay-gp">{listItems}</ul>
         </div>
         <div className="navbar-end font-montserrat md:mr-4">
