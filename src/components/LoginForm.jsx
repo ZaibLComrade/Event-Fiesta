@@ -17,8 +17,21 @@ const loggedInToast = () =>
   }
 );
 
-const userAlreadyLoggedIn = () => 
-  toast.info("User already logged in", {
+const infoToast = statement => 
+  toast.info(statement, {
+    position: "bottom-right",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+  }
+);
+
+const errorToast = statement => 
+  toast.error(statement, {
     position: "bottom-right",
     autoClose: 3000,
     hideProgressBar: false,
@@ -35,7 +48,6 @@ export default function RegisterForm() {
   const { signInUser, user, setLoading, googleSignInUser } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const [error, setError] = useState("");
 
   // Runs when form is submitted
   const handleSubmit = (e) => {
@@ -46,7 +58,7 @@ export default function RegisterForm() {
     const password = form.get("password");
     if (email === user?.email) {
 	  navigate("/");
-	  userAlreadyLoggedIn();
+	  infoToast("User already logged in");
       return;
     }
 
@@ -54,12 +66,11 @@ export default function RegisterForm() {
     signInUser(email, password)
       .then(() => {
         navigate(location?.state || "/");
-		loggedInToast();
+        loggedInToast();
         setLoading(false);
       })
       .catch((err) => {
-        setError(err.code);
-        console.log(error);
+        errorToast("Invalid email or password")
         setLoading(false);
       }); // TODO: Errors to be manipulated later
   };

@@ -14,11 +14,12 @@ const createSlider = (contents) => {
 				className="object-cover w-full h-full"
 			/>
 			<div className="absolute text-secondary text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-				<p data-aos="fade-up" className="mb-5 text-2xl">{ `"${testimonial}"` }</p>
-				<div data-aos="fade-right">
+				<p data-aos="fade-up" id="trigger-aos" className="mb-5 text-2xl">{ `"${testimonial}"` }</p>
+				<div data-aos="fade-right" data-aos-anchor="#trigger-aos">
 					<img 
 						data-aos="zoom-in-up"
 						data-aos-delay="400"
+						data-aos-anchor="#trigger-aos"
 						className="mx-auto w-[60px] h-[60px] object-cover mb-2 rounded-full" 
 						src={img} 
 						alt=""

@@ -64,9 +64,9 @@ export default function Navbar() {
               {listItems}
             </ul>
           </div>
-          <a className="text-4xl md:text-5xl lg:text-6xl font-bold font-great-vibes normal-case btn btn-ghost">
+          <Link to="/" className="text-4xl md:text-5xl lg:text-6xl font-bold font-great-vibes normal-case btn btn-ghost">
             Event Fiesta
-          </a>
+          </Link>
         </div>
         <div className="hidden navbar-center xl:flex">
           <ul className="px-1 menu-horizontal menu underlay-gp">{listItems}</ul>
