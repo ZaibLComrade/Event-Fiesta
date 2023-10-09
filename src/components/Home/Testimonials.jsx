@@ -51,10 +51,9 @@ export default function Testimonials() {
 	}, []);
 
 	return (
-		<div className="relative z-[1] mt-14">
-			<div className="absolute xl:top-[100px] -top-[10px] lg:top-[70px] top-[0px] z-[1] text-center w-full h-full">
+		<div className="relative z-[1] mt-14 overflow-hidden">
+			<div className="absolute xl:top-[100px] -top-[10px] lg:top-[70px] md:top-[0px] z-[1] text-center w-full h-full">
 			<h2 className="mx-auto text-white font-playfair-display text-[180px]  w-max">&rdquo;</h2>
-				<p className="absolute top-[120px] hidden md:block lg:top-[140px] text-5xl left-1/2 -translate-x-1/2 font-playfair-display text-white/30 lg:text-7xl">Testimonials</p>
 			</div>
 			<Splide
 				hasTrack={ false }

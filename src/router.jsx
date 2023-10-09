@@ -49,17 +49,6 @@ const router = createBrowserRouter([
 					return resource.find(res => res.id === idInt) || null;
 				},
 			},
-			// {
-			// 	path: "team/:member",
-			// 	element: <PrivateRoute><TeamDetails/></PrivateRoute>,
-			// 	loader: async ({ params }) => {
-			// 		const response = await fetch("/team.json");
-			// 		const resource = await response.json();
-			// 		console.log(resource);
-			// 		const memberInt = parseInt(params.id);
-			// 		return resource.find(res => res.id === memberInt) || null;
-			// 	}
-			// }
 		]
 	}
 ])

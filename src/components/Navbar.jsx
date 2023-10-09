@@ -15,21 +15,6 @@ const listItems = (
         <span className="underlay"></span>Register
       </NavLink>
     </li>
-    <li>
-      <NavLink className="underlay-parent" to="/path1">
-        <span className="underlay"></span>About
-      </NavLink>
-    </li>
-    <li>
-      <NavLink className="underlay-parent" to="/path2">
-        <span className="underlay"></span>Gallery
-      </NavLink>
-    </li>
-    <li>
-      <NavLink className="underlay-parent" to="/path3">
-        <span className="underlay"></span>Blog
-      </NavLink>
-    </li>
   </>
 );
 
