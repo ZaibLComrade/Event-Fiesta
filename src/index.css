@@ -84,3 +84,7 @@
 .headroom {
   z-index: 9999 !important;
 }
+
+.banner-carousel-container .splide__arrow{
+	display: none;
+}

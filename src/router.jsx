@@ -7,6 +7,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import LoginPage from "./components/LoginPage";
 import RegisterPage from "./components/RegisterPage"
 import TeamDetails from "./components/TeamDetails";
+import ContactUs from "./components/ContactUs";
 
 const router = createBrowserRouter([
 	{
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
 					const idInt = parseInt(params.member);
 					return resource.find(res => res.id === idInt) || null;
 				},
+			},
+			{
+				path: "/contactus",
+				element: <PrivateRoute><ContactUs/></PrivateRoute>
 			},
 		]
 	}

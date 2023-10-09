@@ -4,8 +4,8 @@ import bgImg from "../../assets/footer.jpg";
 export default function Footer() {
   return (
 	<div className="relative overflow-hidden">
-		<div className="absolute"><img src={ bgImg} alt="" /></div>
-	<footer className="footer footer-center p-10 bg-black/90 relative text-secondary rounded">
+		<div className="absolute w-full h-full"><img src={ bgImg} className="object-cover w-full h-full" alt="" /></div>
+	<footer className="relative p-10 rounded footer footer-center bg-black/[.97] text-secondary">
       <nav className="grid grid-flow-col gap-4">
         <a className="link link-hover">About us</a>
         <a className="link link-hover">Contact</a>

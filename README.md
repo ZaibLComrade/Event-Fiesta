@@ -1,9 +1,9 @@
-# React + Vite
+# Event Fiesta
+## Live Link: 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# b8a9-event-management-ZaibLComrade
+## Project Features
+- Mesmerizing UI to provide users luxurious and elegant experience.
+- Authentication is provided. Users can interact with the website with a face.
+- React router dom creates illusion of single page application which is faster.
+- Beautiful components.
+- Comprehensive articles to get a grasp of the services.

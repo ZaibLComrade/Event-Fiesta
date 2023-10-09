@@ -15,6 +15,22 @@ const listItems = (
         <span className="underlay"></span>Register
       </NavLink>
     </li>
+    <li>
+      <NavLink className="underlay-parent" to="/aboutus">
+        <span className="underlay"></span>About Us
+      </NavLink>
+    </li>
+    <li>
+      <NavLink className="underlay-parent" to="/gallery">
+        <span className="underlay"></span>Gallery
+      </NavLink>
+    </li>
+    <li>
+      <NavLink className="underlay-parent" to="/blog">
+        <span className="underlay"></span>Blog
+      </NavLink>
+    </li>
+
   </>
 );
 
@@ -23,13 +39,13 @@ export default function Navbar() {
 
   return (
     <Headroom>
-      <div className="navbar bg-primary py-4 text-custom-grey-1">
+      <div className="py-4 navbar bg-primary text-custom-grey-1">
         <div className="navbar-start font-montserrat">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost xl:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="lg:w-10 lg:h-10 md:h-7 md:w-7 w-5 h-5"
+                className="w-5 h-5 lg:w-10 lg:h-10 md:h-7 md:w-7"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -49,7 +65,7 @@ export default function Navbar() {
               {listItems}
             </ul>
           </div>
-          <Link to="/" className="text-4xl md:text-5xl lg:text-6xl font-bold font-great-vibes normal-case btn btn-ghost">
+          <Link to="/" className="text-4xl font-bold normal-case md:text-5xl lg:text-6xl font-great-vibes btn btn-ghost">
             Event Fiesta
           </Link>
         </div>
@@ -57,7 +73,7 @@ export default function Navbar() {
           <ul className="px-1 menu-horizontal menu underlay-gp">{listItems}</ul>
         </div>
         <div className="navbar-end font-montserrat md:mr-4">
-          <div className="dropdown dropdown-end block md:hidden">
+          <div className="block dropdown dropdown-end md:hidden">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
                 <img src={user?.photoURL ? user.photoURL : dummyImage} />
@@ -93,7 +109,7 @@ export default function Navbar() {
             </ul>
           </div>
 
-          <div className="md:flex hidden items-center gap-3">
+          <div className="items-center hidden md:flex gap-3">
 						<div className="text-right h-max">
 							{user ? (
 								<div>
@@ -116,7 +132,7 @@ export default function Navbar() {
 							</div>
 						</label>
 					</div>
-					<div className="md:flex hidden items-center">
+					<div className="items-center hidden md:flex">
 						{user ? (
 							<button className="ml-2 btn btn-secondary" onClick={signOutUser}>
 								Sign Out

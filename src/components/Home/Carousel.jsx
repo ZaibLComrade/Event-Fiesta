@@ -3,6 +3,7 @@ import banner1 from "../../assets/banner1.jpg";
 import banner2 from "../../assets/banner2.jpg";
 import banner3 from "../../assets/banner3.jpg";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
+import { Link } from "react-router-dom";
 import "@splidejs/react-splide/css";
 import AOS from "aos";
 AOS.init();
@@ -25,9 +26,9 @@ const slider1 = (
             event management services.
           </p>
           <div data-aos="fade-up-right" data-aos-anchor="#header-data" data-aos-duration="1200" data-aos-delay="500" className="">
-            <button className="mx-auto w-max btn btn-accent font-montserrat">
-              Celebrate Now!
-            </button>
+            <Link to="/contactus" className="mx-auto w-max btn btn-accent font-montserrat">
+              Contact Us Now!
+            </Link>
           </div>
         </div>
       </div>
@@ -68,6 +69,7 @@ const slider3 = (
 
 export default function Carousel() {
   return (
+	  <div className="banner-carousel-container">
     <Splide
       hasTrack={false}
       aria-label="Banner"
@@ -86,5 +88,6 @@ export default function Carousel() {
         {/* {slider3} */}
       </SplideTrack>
     </Splide>
+	</div>
   );
 }
