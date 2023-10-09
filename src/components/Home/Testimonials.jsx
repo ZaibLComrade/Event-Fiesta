@@ -13,7 +13,7 @@ const createSlider = (contents) => {
 				src={`${"https://picsum.photos/3000/1500"}`}
 				className="object-cover w-full h-full"
 			/>
-			<div className="absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+			<div className="absolute text-secondary text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
 				<p data-aos="fade-up" className="mb-5 text-2xl">{ `"${testimonial}"` }</p>
 				<div data-aos="fade-right">
 					<img 

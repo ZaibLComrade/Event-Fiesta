@@ -32,7 +32,7 @@ export default function Services() {
 								to={ `/details/${service.id}` }
 								className="btn btn-primary"
 							>
-								Learn now!
+								Details
 							</Link>
 						</div>
 					</div>

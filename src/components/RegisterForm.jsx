@@ -1,10 +1,61 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import { toast } from "react-toastify";
+
+const registered = () => 
+  toast.success("Successfully registered user", {
+    position: "bottom-right",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+  }
+);
+
+const errorPass = statement => 
+	toast.warn(statement, {
+	position: "bottom-center",
+	autoClose: 1000,
+	hideProgressBar: false,
+	closeOnClick: true,
+	pauseOnHover: true,
+	draggable: true,
+	progress: undefined,
+	theme: "colored",
+})
+
+
+
+const validatePassword = (password) => {
+	const minLength = 6;
+	const lengthExp = new RegExp(`^.{1,${minLength}}$`);
+	const capitalExp = /[A-Z]/;
+	const specialChar = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/;
+	
+	if (lengthExp.test(password)) {
+	  	errorPass('Password is too short');
+		return false;
+	} 
+	if(!capitalExp.test(password)) {
+		errorPass("Password does not contain at least 1 capital letter")
+		return false;
+	}
+	if(!specialChar.test(password)) {
+		errorPass("Password must contain at last 1 special character");
+		return false
+	}
+	return true
+}
+
 
 export default function RegisterForm() {
 	// Getting customized firebase functions from context
 	const { createUser, updateProfile } = useAuth();
+	const navigate = useNavigate()
 	const [error, setError] = useState("");
 	
 	// Runs when form is submitted
@@ -19,10 +70,18 @@ export default function RegisterForm() {
 		}
 		const email = form.get("email");
 		const password = form.get("password");
+		if(!validatePassword(password)) {
+			return;
+		}
 		
 		// Creating firebase user
 		createUser(email, password)
-			.then(userCredential => updateProfile(userCredential.user, userProfile))
+			.then(userCredential => {
+				updateProfile(userCredential.user, userProfile);
+				console.log(userCredential);
+				navigate("/");
+				registered();
+			})
 		.catch(err => console.error(err)); // TODO: Errors to be manipulated later
 	}
 	
