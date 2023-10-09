@@ -44,7 +44,7 @@ export default function Testimonials() {
 	return (
 		<div className="relative z-[1] mt-14">
 			<p className="absolute top-[150px] text-white/30 left-1/2 -translate-x-1/2 text-7xl z-[2]">Testimonials</p>
-			<h2 className="absolute z-[3] mx-auto text-[180px] top-[40px] left-1/2 -translate-x-1/2 w-max">"</h2>
+			<h2 className="absolute z-[3] mx-auto text-white font-playfair-display text-[180px] top-[40px] left-1/2 -translate-x-1/2 w-max">&rdquo;</h2>
 			<Splide
 				hasTrack={ false }
 				aria-label="Testimonials"
