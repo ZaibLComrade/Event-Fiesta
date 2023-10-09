@@ -14,7 +14,7 @@ export default function Details() {
 		</div>
 		<div className="shrink-0 absolute h-full w-full lg:relative p-4">
 			<div className="absolute top-1/2  text-secondary lg:text-black  -translate-y-1/2">
-				<h1 className="w-max mx-auto font-playfair-display font-semibold text-5xl mt-6">{ title }</h1>
+				<h1 className="w-max mx-auto font-great-vibes font-semibold text-5xl mt-6">{ title }</h1>
 				<p className="mt-4 font-open-sans text-sm md:text-md lg:text-lg text-center font-medium">{ long_description }</p>
 			</div>
 		</div>
