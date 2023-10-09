@@ -1,31 +1,40 @@
 import { useEffect, useState } from "react";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
+import img1 from "../../assets/balloon2.jpg";
+import img2 from "../../assets/birthday2.jpg";
+import img3 from "../../assets/decoration3.jpg";
+import img4 from "../../assets/party3.jpg";
+import img5 from "../../assets/ven4.jpg";
+import img6 from "../../assets/ven5.jpg";
+import img7 from "../../assets/wedding3.jpg";
 import AOS from "aos";
 AOS.init();
 
-const createSlider = (contents) => {
+const imgArr = [img1, img2, img3, img4, img5, img6, img7];
+
+const createSlider = (contents, idx) => {
 	const { name, position, testimonial, id, img } = contents;
 	return (
 		<SplideSlide key={ id }>
 			<div className="absolute w-full h-full bg-black/60"></div>
 			<img 
-				src={`${"https://picsum.photos/3000/1500"}`}
+				src={imgArr[idx]}
 				className="object-cover w-full h-full"
 			/>
-			<div className="absolute text-secondary text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-				<p data-aos="fade-up" id="trigger-aos" className="mb-5 text-2xl">{ `"${testimonial}"` }</p>
+			<div className="absolute text-center text-secondary top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+				<p data-aos="fade-up" id="trigger-aos" className="mb-5 text-lg md:text-2xl lg:text-3xl font-dancing-script">{ `"${testimonial}"` }</p>
 				<div data-aos="fade-right" data-aos-anchor="#trigger-aos">
 					<img 
 						data-aos="zoom-in-up"
 						data-aos-delay="400"
 						data-aos-anchor="#trigger-aos"
-						className="mx-auto w-[60px] h-[60px] object-cover mb-2 rounded-full" 
+						className="mx-auto xl:w-[80px] xl:h-[80px] w-[60px] h-[60px] object-cover mb-2 rounded-full" 
 						src={img} 
 						alt=""
 					/>
-					<h3 className="text-lg">{name}</h3>
-					<p  className="text-sm">{position}</p>
+					<h3 className="text-lg lg:text-xl xl:text-2xl font-playfair-display">{name}</h3>
+					<p  className="text-sm lg:text-lg xl:text-xl font-lato">{position}</p>
 				</div>
 			</div>
 		</SplideSlide>
@@ -43,8 +52,10 @@ export default function Testimonials() {
 
 	return (
 		<div className="relative z-[1] mt-14">
-			<p className="absolute top-[150px] text-white/30 left-1/2 -translate-x-1/2 text-7xl z-[2]">Testimonials</p>
-			<h2 className="absolute z-[3] mx-auto text-white font-playfair-display text-[180px] top-[40px] left-1/2 -translate-x-1/2 w-max">&rdquo;</h2>
+			<div className="absolute xl:top-[100px] -top-[10px] lg:top-[70px] top-[0px] z-[1] text-center w-full h-full">
+			<h2 className="mx-auto text-white font-playfair-display text-[180px]  w-max">&rdquo;</h2>
+				<p className="absolute top-[120px] hidden md:block lg:top-[140px] text-5xl left-1/2 -translate-x-1/2 font-playfair-display text-white/30 lg:text-7xl">Testimonials</p>
+			</div>
 			<Splide
 				hasTrack={ false }
 				aria-label="Testimonials"
@@ -56,8 +67,8 @@ export default function Testimonials() {
 				}}
 			>
 				<SplideTrack>
-				{testimonials.map(elem =>
-					createSlider(elem)
+				{testimonials.map((elem, idx) =>
+					createSlider(elem, idx)
 				)}
 				</SplideTrack>
 			</Splide>

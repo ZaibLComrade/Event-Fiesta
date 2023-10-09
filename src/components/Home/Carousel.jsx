@@ -18,14 +18,14 @@ const slider1 = (
 
     <div>
       <div className="absolute top-0 z-[3] h-full w-full">
-        <div className="absolute text-left font-playfair-display text-secondary top-1/2 -translate-y-1/2 left-1/2 max-lg:-translate-x-1/2 lg:left-[80px] space-y-3">
-          <h1 data-aos="fade-down-right" className=" text-5xl" id="header-data">Creating Unforgettable Moments</h1>
-          <p data-aos="fade-right" data-aos-anchor="#header-data" data-aos-duration="500" data-aos-delay="300" className="font-lato text-xl max-w-[500px]">
+		  <div className="absolute text-center md:text-left font-playfair-display text-secondary top-1/2 -translate-y-1/2 left-1/2 max-lg:-translate-x-1/2 lg:left-[80px] space-y-3">
+          <h1 data-aos="fade-down-right" className="text-5xl" id="header-data">Creating Unforgettable Moments</h1>
+			<p data-aos="fade-right" data-aos-anchor="#header-data" data-aos-duration="500" data-aos-delay="300" className="font-lato text-base md:text-xl max-w-[500px]">
             A simple and elegant statement that emphasizes the goal of your
             event management services.
           </p>
           <div data-aos="fade-up-right" data-aos-anchor="#header-data" data-aos-duration="1200" data-aos-delay="500" className="">
-            <button className="btn btn-accent font-montserrat">
+            <button className="mx-auto w-max btn btn-accent font-montserrat">
               Celebrate Now!
             </button>
           </div>
