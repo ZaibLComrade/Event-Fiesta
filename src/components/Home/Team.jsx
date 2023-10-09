@@ -13,7 +13,7 @@ export default function Team() {
 			.catch((err) => console.err(err));
 	}, []);
 
-	return <div className="container mx-auto my-14 space-y-10">
+	return <div className="container mx-auto my-14 px-4 space-y-10">
 		<h2 className="mx-auto text-5xl w-max">Our Team</h2>
 		<div className="flex flex-wrap justify-center gap-16">
 			{members.map((member, idx) => (

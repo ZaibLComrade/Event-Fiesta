@@ -143,7 +143,7 @@ export default function RegisterForm() {
 						</button>
 					</div>
 				</form>
-				<div className="mx-auto w-max">
+				<div className="mx-auto text-sm md:text-base text-center">
 					<p>Already registered? <Link className="text-blue-600 underline hover:text-blue-500" to="/login">Login</Link> here</p>
 				</div>
 			</div>

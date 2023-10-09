@@ -5,7 +5,7 @@ import Team from "./Team";
 import Testimonials from "./Testimonials";
 
 export default function Home() {
-	return <div>
+	return <div className="overflow-x-hidden">
 		<Carousel/>
 		<Services/>
 		<Team/>

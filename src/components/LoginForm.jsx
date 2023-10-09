@@ -109,7 +109,7 @@ export default function RegisterForm() {
 			<p className="font-bold  w-8 mx-auto bg-base-100 relative -top-3"> Or</p>
 			<button onClick={ googleSignInUser } className="flex items-center btn btn-accent w-full gap-2"><FcGoogle className="text-xl"/><div>Login with Google</div></button>
 		</div>
-        <div className="mx-auto w-max">
+        <div className="mx-auto text-sm md:text-base text-center">
           <p>
             Don't have an account?{" "}
             <Link
