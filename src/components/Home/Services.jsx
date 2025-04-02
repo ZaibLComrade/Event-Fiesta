@@ -12,11 +12,11 @@ export default function Services() {
 		.catch(err => console.error(err));
 	}, [])
 	
-	return <div className="container mx-auto my-14 px-4 space-y-10">
+	return <div className="container px-4 mx-auto my-14 space-y-10">
 		<h2 className="mx-auto text-5xl font-playfair-display w-max">Services</h2>
 		<div className="w-full mx-auto grid md:grid-cold-2 grid-cols-1 lg:grid-cols-3 gap-8">
 			{services.map((service) => (
-				<div key={service.id} className="card hover:-translate-y-3 duration-200 ease-in-out transition-transform glass">
+				<div key={service.id} className="card hover:-translate-y-2 duration-200 ease-out transition-transform glass">
 					<figure className="">
 						<img
 							className="w-full object-cover h-[250px]"
@@ -24,9 +24,9 @@ export default function Services() {
 						/>
 					</figure>
 					<div className="text-left card-body">
-						<h2 className=" card-title font-lato font-bold">{ service.title }</h2>
-						<p className="mx-auto my-5 font-open-sans text-lg font-medium">{ service.short_description }</p>
-						<p className=" font-montserrat text-xl font-semibold">Price: { service.price }</p>
+						<h2 className="font-bold card-title font-lato">{ service.title }</h2>
+						<p className="mx-auto my-5 text-lg font-medium font-open-sans">{ service.short_description }</p>
+						<p className="text-xl font-semibold font-montserrat">Price: { service.price }</p>
 						<div className="justify-end card-actions">
 							<Link
 								to={ `/details/${service.id}` }

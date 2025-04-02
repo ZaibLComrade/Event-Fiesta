@@ -1,5 +1,5 @@
 import banner from "../../assets/banner.jpg";
-import banner1 from "../../assets/banner1.jpg";
+import bannerMain from "../../assets/banner-main.jpg";
 import banner2 from "../../assets/banner2.jpg";
 import banner3 from "../../assets/banner3.jpg";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
@@ -12,32 +12,65 @@ AOS.init();
 // "https://i.ibb.co/kqmn5Jb/wedding1.jpg"
 
 const slider1 = (
-  <SplideSlide>
-    <div className="absolute w-full h-full z-[0] bg-primary/30"></div>
-    <div className="absolute w-full h-full z-[1] bg-black/40"></div>
-    <img src={banner} alt="" className="z-0 object-cover w-full h-full" />
-
-    <div>
-      <div className="absolute top-0 z-[3] h-full w-full">
-		  <div className="absolute text-center md:text-left font-playfair-display text-secondary top-1/2 -translate-y-1/2 left-1/2 max-lg:-translate-x-1/2 lg:left-[80px] space-y-3">
-          <h1 data-aos="fade-down-right" className="text-5xl" id="header-data">Creating Unforgettable Moments</h1>
-			<p data-aos="fade-right" data-aos-anchor="#header-data" data-aos-duration="500" data-aos-delay="300" className="font-lato text-base md:text-xl max-w-[500px]">
-            A simple and elegant statement that emphasizes the goal of your
-            event management services.
-          </p>
-          <div data-aos="fade-up-right" data-aos-anchor="#header-data" data-aos-duration="1200" data-aos-delay="500" className="">
-            <Link to="/contactus" className="mx-auto w-max btn btn-accent font-montserrat">
-              Contact Us Now!
-            </Link>
-          </div>
-        </div>
-      </div>
-      <div className="absolute w-[300px] hidden xl:block top-1/2 z-10 rounded-md -translate-y-1/2 border-2 border-white right-[300px]">
-        <img data-aos="fade-up-right" data-aos-duration="600" className="relative rounded-md -top-20 -right-20" src="https://i.ibb.co/kqmn5Jb/wedding1.jpg" alt="" />
-      </div>
-    </div>
-  </SplideSlide>
+	<SplideSlide>
+		<div className="absolute w-full h-full z-[0] bg-primary/30"></div>
+		<div className="absolute w-full h-full z-[1] bg-black/40"></div>
+		<img src={banner} alt="" className="z-0 object-cover w-full h-full" />
+		
+		<div className="absolute top-0 flex items-center justify-center debug">
+		{/* text */}
+			<div className="">
+				<div className="text-center md:text-left font-playfair-display text-secondary space-y-3">
+					<h1 data-aos="fade-down-right" className="text-5xl" id="header-data">Creating Unforgettable Moments</h1>
+					<p data-aos="fade-right" data-aos-anchor="#header-data" data-aos-duration="500" data-aos-delay="300" className="text-base font-lato md:text-xl">
+						A simple and elegant statement that emphasizes the goal of your
+						event management services.
+					</p>
+					<div data-aos="fade-up-right" data-aos-anchor="#header-data" data-aos-duration="1200" data-aos-delay="500" className="">
+					<Link to="/contactus" className="mx-auto btn btn-accent font-montserrat">
+						Contact Us Now!
+					</Link>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		{/* img */}
+		<div className="border-2border-white rounded-md">
+			<img data-aos="fade-up-right" data-aos-duration="600" className="relative rounded-md -top-20 -right-20" src={ bannerMain } alt="" />
+		</div>
+	</SplideSlide>
 );
+
+// const slider1 = (
+//   <SplideSlide>
+//     <div className="absolute w-full h-full z-[0] bg-primary/30"></div>
+//     <div className="absolute w-full h-full z-[1] bg-black/40"></div>
+//     <img src={banner} alt="" className="z-0 object-cover w-full h-full" />
+
+//     <div>
+//       <div className="absolute debug top-0 z-[3] h-full w-full">
+// 		  <div className="absolute text-center md:text-left font-playfair-display text-secondary top-1/2 -translate-y-1/2 left-1/2 max-lg:-translate-x-1/2 lg:left-[80px] space-y-3">
+//           <h1 data-aos="fade-down-right" className="text-5xl" id="header-data">Creating Unforgettable Moments</h1>
+// 			<p data-aos="fade-right" data-aos-anchor="#header-data" data-aos-duration="500" data-aos-delay="300" className="font-lato text-base md:text-xl max-w-[500px]">
+//             A simple and elegant statement that emphasizes the goal of your
+//             event management services.
+//           </p>
+//           <div data-aos="fade-up-right" data-aos-anchor="#header-data" data-aos-duration="1200" data-aos-delay="500" className="">
+//             <Link to="/contactus" className="mx-auto w-max btn btn-accent font-montserrat">
+//               Contact Us Now!
+//             </Link>
+//           </div>
+//         </div>
+//       </div>
+//       <div className="absolute w-[300px] top-1/2 z-10 rounded-md -translate-y-1/2 border-2 border-white right-[300px]">
+//         <img data-aos="fade-up-right" data-aos-duration="600" className="relative rounded-md -top-20 -right-20" src={ bannerMain } alt="" />
+//       </div>
+//     </div>
+//   </SplideSlide>
+
+// );
+
 const slider2 = (
   <SplideSlide>
     <div className="absolute w-full h-full z-[0] bg-primary/30"></div>
